@@ -1,10 +1,9 @@
 
-class IBGEConfig():
+class PopulacaoConfig():
+    """
+    Configurações da API do IBGE para Consulta de população via SIDRA (Tabela 6579)
+    """
     
-    # Dados das cidades
-    STATE_ID = 23 # Ceará
-    MUNICIPIOS_URL = f"https://servicodados.ibge.gov.br/api/v1/localidades/estados/{STATE_ID}/municipios"
-
     # Dados da população
     # API SIDRA (Tabela 6579 - Estimativa de População)
     # v/93 = Variável População Residente
