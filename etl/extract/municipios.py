@@ -1,5 +1,4 @@
 import requests
-
 from config.api.municipios import MunicipiosConfig
 
 class MunicipiosExtractor:
@@ -31,10 +30,10 @@ class MunicipiosExtractor:
         except ValueError:
             raise RuntimeError("Erro ao converter resposta para JSON")
 
-        return MunicipiosExtractor.parse_municipios(data)
+        return MunicipiosExtractor.parse(data)
     
     @staticmethod
-    def parse_municipios(data):
+    def parse(data):
         """
         Converte a resposta da API em estrutura padronizada.
 
