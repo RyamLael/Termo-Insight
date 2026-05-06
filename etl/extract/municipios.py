@@ -38,7 +38,7 @@ class MunicipiosExtractor:
         Converte a resposta da API em estrutura padronizada.
 
         Args:
-            data (list): JSON retornado pela API
+            data (list): JSONs retornados pela API
 
         Returns:
             list[dict]: Lista de municípios normalizados

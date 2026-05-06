@@ -3,6 +3,7 @@ from config.api.populacao import PopulacaoConfig
 
 class PopulationExtractor:
 
+
     @staticmethod
     def fetch_populacao(anos="last", nivel="municipio", estado_id=None, municipios_ids=None):
 
@@ -90,7 +91,8 @@ class PopulationExtractor:
                     "populacao": populacao
                 })
 
-            except (ValueError, TypeError):
+            except (ValueError, TypeError) as e:
+                print(f"Erro ao processar linha: {item} | erro: {e}")
                 continue
 
         return resultado
